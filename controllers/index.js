@@ -1,4 +1,4 @@
-const auth = require('./auth');
+const auth = require('./Auth');
 const branch = require('./Branch');
 const classes = require('./Classes');
 const school = require('./School');

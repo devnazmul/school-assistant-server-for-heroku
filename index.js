@@ -7,14 +7,16 @@ const mongoose = require('mongoose');
 const cors = require("cors");
 require("dotenv").config();
 
+
+// IMPORT ROUTES 
+const routes = require('./routes');
+
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(bodyParser.json())
 app.use(cors());
 app.use(express.json());
-// IMPORT ROUTES 
-const routes = require('./routes');
 
 
 // SETTING ROUTER

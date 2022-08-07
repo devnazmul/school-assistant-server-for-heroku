@@ -1,21 +1,21 @@
 const test = (req, res) => {
-    res.send('test student controller.');
+    res.send('test branch controller.');
 }
 
 const all = (req, res) => {
-    res.send('all student controller.');
+    res.send('all branch controller.');
 }
 const create = (req,res)=>{
-    res.send('create student controller.');
+    res.send('create branch controller.');
 }
 const find = (req,res)=>{
-    res.send('find student controller.');
+    res.send('find branch controller.');
 }
 const update = (req,res)=>{
-    res.send('update student controller.');
+    res.send('update branch controller.');
 }
 const remove = (req,res)=>{
-    res.send('remove student controller.');
+    res.send('remove branch controller.');
 }
 
 module.exports = {

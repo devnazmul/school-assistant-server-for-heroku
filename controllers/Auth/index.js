@@ -55,31 +55,16 @@ const registration = async (req, res) => {
 
 }
 
-const login = async (req, res) => {
-    const existedUser = await User.find({ email:req.body.email });
-    const DBuserEmail = existedUser[0].email;
-    const hash = existedUser[0].password;
-     if (DBuserEmail === req.body.email) {
-        bcrypt.compare(req.body.password, hash, function (err, result) {
-       if(result){
-            res.send({
-                status:"success",
-                data:{
-                    message:"login successed!"
-                }
-            })
-        
-       }else{
-        res.send({
-            status:"failed",
-            data:{
-                message:"login unsuccessed!"
-            }
-        })
-    
-       }
-    });
-}
+const login = (req, res) => {
+    // res.send('login')
+    // // if (DBuserEmail === req.body.email) {
+    // bcrypt.compare(req.body.password, hash, function (err, result) {
+    //     console.log(result);
+    //     if (result) {
+    //         res.send({ message: "Auth Success!" })
+    //     }
+    //     res.json({ message: "Email or password incorrect" })
+    // });
 }
 
 

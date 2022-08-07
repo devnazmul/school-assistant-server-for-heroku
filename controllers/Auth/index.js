@@ -22,25 +22,9 @@ const registration = async (req, res) => {
                         email: req.body.email,
                         profile_pic_url: (req.body?.profilePicUrl ? req.body.profilePicUrl : 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg'),
                         password: hash
-                    }).then((user)=>{
-                        console.log(user);
-                        res.send({
-                            status:"success",
-                            data:{
-
-                                jwt:"",
-                                message:"registration success!"
-                            }
-                        })
-                    }).catch(err=>{
-
                     });
-                    res.send({
-                        status:"failed",
-                        data:{
-                            message:"registration unsuccess!"
-                        }
-                    })
+                    console.log('success!');
+                    res.send('success!');
                 }
             })
     } else {
@@ -81,7 +65,6 @@ const login = async (req, res) => {
             res.send({
                 status:"success",
                 data:{
-                    jwt:"",
                     message:"login successed!"
                 }
             })

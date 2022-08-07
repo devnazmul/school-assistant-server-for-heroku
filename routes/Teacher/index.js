@@ -3,10 +3,6 @@ const router    = express.Router();
 const controllers = require('../../controllers').teacher;
 
 router.get('/test',controllers.test)
-router.get('/',controllers.all)
-router.get('/create',controllers.create)
-router.get('/find',controllers.find)
-router.get('/update',controllers.update)
-router.get('/delete',controllers.remove)
-
+router.get('/',controllers.getAll)
+router.post('/create',controllers.create)
 module.exports = router;

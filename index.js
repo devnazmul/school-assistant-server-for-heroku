@@ -4,7 +4,6 @@ const app = express();
 const colog = require('colog');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const passport = require('passport');
 const cors = require("cors");
 
 

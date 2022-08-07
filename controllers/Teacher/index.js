@@ -5,7 +5,7 @@ const test = (req, res) => {
     res.send('test teacher controller.');
 }
 
-const getAll = (req, res) => {
+const all = (req, res) => {
     Teacher.find({}).then((teachers) => {
         res.send({
             status: "Success",
@@ -63,9 +63,21 @@ const create = (req, res) => {
         }
     })
 }
+const find = (req,res)=>{
+    res.send('find teacher controller.');
+}
+const update = (req,res)=>{
+    res.send('update teacher controller.');
+}
+const remove = (req,res)=>{
+    res.send('remove teacher controller.');
+}
 
 module.exports = {
     test,
+    all,
     create,
-    getAll
+    find,
+    update,
+    remove,
 };
